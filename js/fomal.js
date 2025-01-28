@@ -2521,7 +2521,7 @@ if (m == 12 && dd == 25) {//圣诞节
 }
 if (m == 8 && dd == 11) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
+    Swal.fire("祝小G" + (y - 2002).toString() + "岁生日快乐！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2789,7 +2789,7 @@ function createtime() {
   //var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   //var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("01/27/2025 00:00:00");
+  var grt = new Date("01/29/2025 00:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -3174,8 +3174,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/dm14.webp);
-    --darkmode-bg:url(https://lskypro.acozycotage.net/Fomalhaut/img/yuanshen1.webp);
+    --default-bg: url(https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg);
+    --darkmode-bg:url(https://image.baidu.com/search/down?url=https://wx1.sinaimg.cn/small/008HStFogy1hxzdqotjm7j32gw19ckjm.jpg);
     --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
     --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
   }`;
