@@ -1,221 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSS 各种Hack手段</title>
-    <url>/2017/06/25/111/</url>
-    <content><![CDATA[<p><a href="https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg">https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg</a></p>
-<span id="more"></span>
-<table>
-<thead>
-<tr>
-<th><strong>预备党员基本情况</strong></th>
-<th>姓  名</th>
-<th></th>
-<th>性  别</th>
-<th></th>
-<th>出生年月</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>籍  贯</td>
-<td></td>
-<td>出生地</td>
-<td></td>
-<td>民  族</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>学  历</td>
-<td></td>
-<td>学  位</td>
-<td></td>
-<td>参加工作时   间</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>户籍所在地址</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>单位及职务或职称</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>所在支部和党小组</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>接收审批预备党员情况</strong></td>
-<td>党支部研究确定入党积极分子时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>上级党组织下达年度发展党员计划时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>党支部研究列为发展对象时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>党委审查同意发展对象备案时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>党委批复发展对象预审时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>支部大会表决通过预备党员时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>党委审批预备党员时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>预备期起止时间</td>
-<td>年  月  日起至    年  月  日止</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>入党介绍人情况</strong></td>
-<td><em><strong>*姓  名*</strong></em></td>
-<td><em><strong>*单位及职务（含党内职务）*</strong></em></td>
-<td><em><strong>*党龄*</strong></em></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>入党宣誓情况</strong></td>
-<td>举办入党宣誓单位</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>举办入党宣誓时间</td>
-<td>年   月   日</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>递交思想汇报情况</strong></td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td>递交时间</td>
-<td>年  月  日</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
+    <title>test code</title>
+    <url>/2025/01/25/111/</url>
+    <content><![CDATA[<span id="more"></span>
+
+ <figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">extern</span> <span class="hljs-type">void</span> <span class="hljs-title function_">xPortSysTickHandler</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SysTick_Handler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		<span class="hljs-keyword">if</span> (xTaskGetSchedulerState != taskSCHEDULER_NOT_STARTED)<br>		&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br>			xPortSysTickHandler();<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		&#125;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span>		</span><br>&#125;<br><br><span class="hljs-keyword">extern</span> <span class="hljs-type">void</span> <span class="hljs-title function_">xPortSysTickHandler</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SysTick_Handler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		<span class="hljs-keyword">if</span> (xTaskGetSchedulerState != taskSCHEDULER_NOT_STARTED)<br>		&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br>			xPortSysTickHandler();<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		&#125;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span>		</span><br>&#125;<br><br><span class="hljs-keyword">extern</span> <span class="hljs-type">void</span> <span class="hljs-title function_">xPortSysTickHandler</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SysTick_Handler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		<span class="hljs-keyword">if</span> (xTaskGetSchedulerState != taskSCHEDULER_NOT_STARTED)<br>		&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br>			xPortSysTickHandler();<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		&#125;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span>		</span><br>&#125;<br><br><span class="hljs-keyword">extern</span> <span class="hljs-type">void</span> <span class="hljs-title function_">xPortSysTickHandler</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SysTick_Handler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		<span class="hljs-keyword">if</span> (xTaskGetSchedulerState != taskSCHEDULER_NOT_STARTED)<br>		&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br>			xPortSysTickHandler();<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		&#125;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span>		</span><br>&#125;<br><br><span class="hljs-keyword">extern</span> <span class="hljs-type">void</span> <span class="hljs-title function_">xPortSysTickHandler</span><span class="hljs-params">( <span class="hljs-type">void</span> )</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SysTick_Handler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		<span class="hljs-keyword">if</span> (xTaskGetSchedulerState != taskSCHEDULER_NOT_STARTED)<br>		&#123;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br>			xPortSysTickHandler();<br>	<span class="hljs-meta">#<span class="hljs-keyword">if</span> (INCLUDE_xTaskGetSchedulerState == 1)</span><br>		&#125;<br>	<span class="hljs-meta">#<span class="hljs-keyword">endif</span>		</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>以上是code测试</p>
+<p><img src="https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg" alt="w"></p>
 ]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
-      <tags>
-        <tag>jQuery</tag>
-        <tag>表格</tag>
-        <tag>表单验证</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -223,7 +17,36 @@
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="gallery-group-main">
+<figure class="gallery-group">
+    <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png' alt="Group Image Gallery">
+    <figcaption>
+      <div class="gallery-group-name">壁纸</div>
+      <p>收藏的一些壁纸</p>
+      <a href='/Gallery/wallpaper'></a>
+    </figcaption>
+  </figure>
+<figure class="gallery-group">
+    <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg' alt="Group Image Gallery">
+    <figcaption>
+      <div class="gallery-group-name">漫威</div>
+      <p>关于漫威的图片</p>
+      <a href='/Gallery/marvel'></a>
+    </figcaption>
+  </figure>
+<figure class="gallery-group">
+    <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg' alt="Group Image Gallery">
+    <figcaption>
+      <div class="gallery-group-name">OH MY GIRL</div>
+      <p>关于OH MY GIRL的图片</p>
+      <a href='/Gallery/ohmygirl'></a>
+    </figcaption>
+  </figure>
+</div>
+
+
+<p>作者: Jerry<br>連結: <a href="https://butterfly.js.org/posts/ceeb73f/#Gallery%E7%9B%B8%E5%86%8A">https://butterfly.js.org/posts/ceeb73f/#Gallery%E7%9B%B8%E5%86%8A</a><br>來源: Butterfly<br>版權屬於作者所有。商業用途請聯絡作者獲得授權，非商業用途請註明出處。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
