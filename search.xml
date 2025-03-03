@@ -58,6 +58,33 @@
     
     
     <entry>
+      <title>在U盘&#92;移动硬盘上搭建MySQL数据库</title>
+      <link href="/posts/837471e.html"/>
+      <url>/posts/837471e.html</url>
+      
+        <content type="html"><![CDATA[<p>由于近期要使用到mysql数据库，但又不想直接安装到电脑上，一是由于临时使用，不想占用电脑存储空间，二是想安装到移动硬盘上，这样也可以在别的电脑使用。具体安装过程参考视频[<a href="https://www.bilibili.com/video/BV1NS4y1g7Vm/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=af711b70456f58d89b195f5fd884561c">1]</a>，视频教程很详细，此处就不再过多赘述，简单记录一下我在安装使用过程中遇到的坑。</p><ul><li>安装完成后，退出powershell，此时再次打开powershell或cmd，输入<code>mysql -u root -p</code>，再输入password，会出现 Can‘t connect to MySQL server on ‘localhost:3306‘ (10061)，这时候需要输入<code>mysqld --console</code>，启动数据库后才可以正常使用</li></ul><p><img src="https://pic2.zhimg.com/v2-cb6ca75172fca73fac7f813a436a89d3_1440w.jpg" alt="img"></p><p>注：输入<code>mysqld --console</code>需要在对应的文件夹路径。</p><ul><li>在使用过程MySQL过程中窗口要保持，把窗口关闭后mysql也关闭了，就不能正常使用了。</li></ul><p>如果需要在命令行操作mysql数据库，需要另外打开一个cmd或powershell窗口，再次输入<code>mysql -u root -p</code>和密码，就可以进行其他命令操作。</p><p><img src="https://pic4.zhimg.com/v2-74315ebe110b50acbe6f4f8f2abf3b55_1440w.jpg" alt="img"></p><p>使用MySQL数据库软件进行连接</p><p><img src="https://picx.zhimg.com/v2-fda1f32ff8e0490b68c4cdfadb3afe83_1440w.jpg" alt="img"></p><p>Navicat for mysql连接</p><h2 id="参考">参考</h2><ol><li><a href="https://www.bilibili.com/video/BV1NS4y1g7Vm/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=af711b70456f58d89b195f5fd884561c">【演示】5分钟快速在U盘上搭建可随身带走的MySQL数据库_哔哩哔哩_bilibili</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown语法与外挂标签写法汇总</title>
       <link href="/posts/2013454d.html"/>
       <url>/posts/2013454d.html</url>
