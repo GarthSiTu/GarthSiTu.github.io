@@ -2804,8 +2804,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='https://raw.githubusercontent.com/GarthSiTu/image-hosting/0f3a0fe3778333a30348654f45cb098b1a738faa/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/walking.svg' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
-      : `<img class='boardsign' src='https://img.icons8.com/?size=160&id=LluLPonhj5sP&format=png' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
+      ? `<img class='boardsign' src='https://img.icons8.com/?size=80&id=X5V5DMvABgCK&format=png' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
+      : `<img class='boardsign' src='https://img.icons8.com/?size=80&id=LluLPonhj5sP&format=png' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -3174,10 +3174,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg);
-    --darkmode-bg:url(https://image.baidu.com/search/down?url=https://wx1.sinaimg.cn/small/008HStFogy1hxzdqotjm7j32gw19ckjm.jpg);
-    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
-    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
+    --default-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/e8fad25abb18354c1c7f806f6a8043d49dfe3f87.jpg);
+    --darkmode-bg:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/baeeee64fefcb4ce265728b1fc9bc11ec5c4e4dc.jpg);
+    --mobileday-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/%E8%83%A1%E4%B8%BD%E5%A8%9C.avif);
+    --mobilenight-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/8f72a7786d5cfeb88d814c4913baf5deb84af91e.jpg%401192w.avif);
   }`;
 }
 // 切换背景主函数
