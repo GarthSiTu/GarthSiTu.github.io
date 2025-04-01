@@ -3174,10 +3174,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/e8fad25abb18354c1c7f806f6a8043d49dfe3f87.jpg);
-    --darkmode-bg:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/baeeee64fefcb4ce265728b1fc9bc11ec5c4e4dc.jpg);
-    --mobileday-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/%E8%83%A1%E4%B8%BD%E5%A8%9C.avif);
-    --mobilenight-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/8f72a7786d5cfeb88d814c4913baf5deb84af91e.jpg%401192w.avif);
+    --default-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_day_background.jpg);
+    --darkmode-bg:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_night_background.jpg);
+    --mobileday-bg: url(https://image.baidu.com/search/down?url=https://wx2.sinaimg.cn/orj360/008HStFogy1hxwe65tlg7j31hc16oe82.jpg);
+    --mobilenight-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/hlnOFnight.png);
   }`;
 }
 // 切换背景主函数
