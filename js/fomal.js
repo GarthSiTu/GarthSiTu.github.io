@@ -3175,7 +3175,7 @@ if (localStorage.getItem("blogbg") != undefined) {
 } else {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_day_background.jpg);
-    --darkmode-bg:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_night_background.jpg);
+    --darkmode-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_night_background.jpg);
     --mobileday-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/hlnOFday.png);
     --mobilenight-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/hlnOFnight.png);
   }`;
