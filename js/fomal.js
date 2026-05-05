@@ -54,7 +54,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | Fomalhaut🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | Gofan")[0];
 }
 
 function scrollToTop() {
@@ -397,7 +397,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
       flakeCount: 50, // 雪花数目
       minDist: 150,   // 最小距离
       color: "255, 255, 255", // 雪花颜色
-      size: 1.5,  // 雪花大小
+      size: 3,  // 雪花大小
       speed: .5,  // 雪花速度
       opacity: .7,    // 雪花透明度
       stepsize: .5    // 步距
@@ -620,7 +620,7 @@ function owoBig() {
 
 //----------------------------------------------------------------
 
-/* 随便逛逛 start */
+/* 随机文章 start */
 // 随便逛逛
 // 发现有时会和当前页面重复，加一个判断
 function randomPost() {
@@ -634,7 +634,7 @@ function randomPost() {
     }
   })
 }
-/* 随便逛逛 end */
+/* 随机文章 end */
 
 //----------------------------------------------------------------
 
@@ -1120,20 +1120,21 @@ function createtime1() {
 
   var ascll = [
     `欢迎来到Gofanの后花园!`,
-    `Future is now 🍭🍭🍭`,
     `
         
-███████  ██████  ███    ███  █████  ██      ██   ██  █████  ██    ██ ████████ 
-██      ██    ██ ████  ████ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-█████   ██    ██ ██ ████ ██ ███████ ██      ███████ ███████ ██    ██    ██    
-██      ██    ██ ██  ██  ██ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-██       ██████  ██      ██ ██   ██ ███████ ██   ██ ██   ██  ██████     ██   
+ ██████╗  ██████╗ ███████╗ █████╗ ███╗   ██╗
+██╔════╝ ██╔═══██╗██╔════╝██╔══██╗████╗  ██║
+██║  ███╗██║   ██║█████╗  ███████║██╔██╗ ██║
+██║   ██║██║   ██║██╔══╝  ██╔══██║██║╚██╗██║
+╚██████╔╝╚██████╔╝██║     ██║  ██║██║ ╚████║
+ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝
+                                            
                                               
 `,
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2022 By Fomalhaut",
+    "©2025 By Gofan",
   ];
 
   setTimeout(
@@ -1172,7 +1173,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by Gofan %c 你正在访问Gofanの后花园的控制台",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1271,6 +1272,51 @@ function switchNightMode() {
   window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
 }
 
+/* ============================================= */
+/* 新增：根据时间自动切换 + 深夜温馨提示 */
+/* ============================================= */
+function autoSwitchModeByTime() {
+  const hour = new Date().getHours();
+  const isNightTime = hour >= 22 || hour < 6; // 22点~6点 夜间
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+
+  // 晚上 → 自动切夜间
+  if (isNightTime && currentTheme !== 'dark') {
+    activateDarkMode();
+    saveToLocal.set('theme', 'dark', 2);
+    document.getElementById('modeicon').setAttribute('xlink:href', '#icon-sun');
+    // ======================================
+    // 深夜温馨提示（只在晚上自动切换时出现）
+    // ======================================
+    setTimeout(() => {
+      new Vue({
+        data: function () {
+          this.$notify({
+            title: "夜深了🌙",
+            message: "忙碌一天辛苦啦，记得早点休息哦～",
+            position: 'top-left',
+            offset: 50,
+            showClose: true,
+            type: "success",
+            duration: 5000
+          });
+        }
+      })
+    }, 2000)
+  }
+  // 白天 → 自动切日间
+  else if (!isNightTime && currentTheme !== 'light') {
+    activateLightMode();
+    saveToLocal.set('theme', 'light', 2);
+    document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon');
+  }
+}
+
+/* 页面加载时自动执行 */
+document.addEventListener('DOMContentLoaded', function () {
+  autoSwitchModeByTime();
+});
+
 /* 夜间模式切换动画 end */
 
 //----------------------------------------------------------------
@@ -1282,8 +1328,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| Gofan") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('Gofan的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
@@ -2605,110 +2651,7 @@ if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
 
 /* 节日弹窗 end */
 
-//----------------------------------------------------------------
-
-/* 听话鼠标 start */
-var CURSOR;
-
-Math.lerp = (a, b, n) => (1 - n) * a + n * b;
-
-const getStyle2 = (el, attr) => {
-  try {
-    return window.getComputedStyle
-      ? window.getComputedStyle(el)[attr]
-      : el.currentStyle[attr];
-  } catch (e) { }
-  return "";
-};
-
-// 为了屏蔽异步加载导致无法读取颜色值，这里统一用哈希表预处理
-const map = new Map();
-map.set('red', "rgb(241, 71, 71)");
-map.set('orange', "rgb(241, 162, 71)");
-map.set('yellow', "rgb(241, 238, 71)")
-map.set('purple', "rgb(179, 71, 241)");
-map.set('blue', "rgb(102, 204, 255)");
-map.set('gray', "rgb(226, 226, 226)");
-map.set('green', "rgb(57, 197, 187)");
-map.set('whitegray', "rgb(241, 241, 241)");
-map.set('pink', "rgb(237, 112, 155)");
-map.set('black', "rgb(0, 0, 0)");
-map.set('darkblue', "rgb(97, 100, 159)");
-map.set('heoblue', "rgb(66, 90, 239)");
-
-class Cursor {
-  constructor() {
-    this.pos = { curr: null, prev: null };
-    this.pt = [];
-    this.create();
-    this.init();
-    this.render();
-  }
-
-  move(left, top) {
-    this.cursor.style["left"] = `${left}px`;
-    this.cursor.style["top"] = `${top}px`;
-  }
-
-  create() {
-    if (!this.cursor) {
-      this.cursor = document.createElement("div");
-      this.cursor.id = "cursor";
-      this.cursor.classList.add("hidden");
-      document.body.append(this.cursor);
-    }
-    var el = document.getElementsByTagName('*');
-    for (let i = 0; i < el.length; i++)
-      if (getStyle2(el[i], "cursor") == "pointer")
-        this.pt.push(el[i].outerHTML);
-    var colorVal = map.get(localStorage.getItem("themeColor"));
-    document.body.appendChild((this.scr = document.createElement("style")));
-    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='` + colorVal + `'/></svg>") 4 4, auto}`;
-  }
-
-  refresh() {
-    this.scr.remove();
-    this.cursor.classList.remove("hover");
-    this.cursor.classList.remove("active");
-    this.pos = { curr: null, prev: null };
-    this.pt = [];
-
-    this.create();
-    this.init();
-    this.render();
-  }
-
-  init() {
-    document.onmouseover = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.add("hover");
-    document.onmouseout = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.remove("hover");
-    document.onmousemove = e => { (this.pos.curr == null) && this.move(e.clientX - 8, e.clientY - 8); this.pos.curr = { x: e.clientX - 8, y: e.clientY - 8 }; this.cursor.classList.remove("hidden"); };
-    document.onmouseenter = e => this.cursor.classList.remove("hidden");
-    document.onmouseleave = e => this.cursor.classList.add("hidden");
-    document.onmousedown = e => this.cursor.classList.add("active");
-    document.onmouseup = e => this.cursor.classList.remove("active");
-  }
-
-  render() {
-    if (this.pos.prev) {
-      // 跟踪速度调节
-      this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);
-      this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);
-      this.move(this.pos.prev.x, this.pos.prev.y);
-    } else {
-      this.pos.prev = this.pos.curr;
-    }
-    requestAnimationFrame(() => this.render());
-  }
-}
-
-(() => {
-  CURSOR = new Cursor();
-  // 需要重新获取列表时，使用 CURSOR.refresh()
-})();
-
-/* 听话鼠标 end */
-
-//----------------------------------------------------------------
+//听话鼠标js移至source\js\cursor.js
 
 /* 新年倒计时 start */
 // let newYearTimer = null;
@@ -2860,6 +2803,11 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
         var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`
       }
       document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
+      document.getElementById("fps").style.position = "fixed";
+      document.getElementById("fps").style.left = "auto";
+      document.getElementById("fps").style.right = "8px";
+      document.getElementById("fps").style.bottom = "5px";
+      document.getElementById("fps").style.fontSize = "14px"; // 缩小字体
       frame = 0;
       lastTime = now;
     };
@@ -2986,7 +2934,8 @@ function setUniverse() {
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "none");
+  document.getElementById("snow").style.display = "block";
+  localStorage.setItem("snow", "block");
 }
 document.getElementById("snow").style.display = localStorage.getItem("snow");
 function setSnow() {
@@ -3041,7 +2990,7 @@ function toggleRightside() {
 
 // 透明度调节滑块
 if (localStorage.getItem("transNum") == undefined) {
-  localStorage.setItem("transNum", 95);
+  localStorage.setItem("transNum", 50);
 }
 var curTransNum = localStorage.getItem("transNum");
 var curTransMini = curTransNum * 0.95;
@@ -3061,7 +3010,7 @@ function setTrans() {
 
 // 模糊度调节滑块
 if (localStorage.getItem("blurRad") == undefined) {
-  localStorage.setItem("blurRad", 20);
+  localStorage.setItem("blurRad", 10);
 }
 var curBlur = localStorage.getItem("blurRad"); // 当前模糊半径
 var miniBlur = curBlur * 0.95;
@@ -3407,7 +3356,7 @@ function createWinbox() {
 <h3>1. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background1.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background2.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background3.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background4.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background5.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background6.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Anime%20girl%20background6.jpg)')"></a></div>
               </div>
             </details>
 
@@ -3416,7 +3365,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看风景背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background1.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background2.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background3.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/scenic%20background3.jpg)')"></a></div>
               </div>
             </details>
 
@@ -3424,7 +3373,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看萌宠背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background1.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background1.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background2.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background3.jpg)" class="imgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Cute%20pet%20background3.jpg)')"></a></div>
               </div>
             </details>
 
@@ -3448,7 +3397,7 @@ function createWinbox() {
 <h3>6. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background2.jpg)" class="pimgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background2.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background3.jpg)" class="pimgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background4.jpg)" class="pimgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background4.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background5.jpg)" class="pimgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background5.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background6.jpg)" class="pimgbox" onclick="changeBg('url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/Background/Adapt%20to%20mobile%20background6.jpg)')"></a></div>
               </div>
             </details>
 
