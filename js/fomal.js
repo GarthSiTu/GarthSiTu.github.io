@@ -605,7 +605,7 @@ function owoBig() {
             // 设置盒子样式
             div.style.cssText = `display:flex; height:${height}px; width:${width}px; left:${left}px; top:${top}px;`;
             // 在盒子中插入图片
-            div.innerHTML = `<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${e.target.src}">`
+            div.innerHTML = `<img src="${e.target.src}">`
           }, 300);
         }
       };
@@ -2747,8 +2747,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src='https://img.icons8.com/?size=80&id=X5V5DMvABgCK&format=png' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
-      : `<img class='boardsign' src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src='https://img.icons8.com/?size=80&id=LluLPonhj5sP&format=png' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
+      ? `<img class='boardsign' src='https://img.icons8.com/?size=80&id=X5V5DMvABgCK&format=png' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`
+      : `<img class='boardsign' src='https://img.icons8.com/?size=80&id=LluLPonhj5sP&format=png' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> </div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -3123,10 +3123,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_day_background.jpg);
-    --darkmode-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/pc_night_background.jpg);
-    --mobileday-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/hlnOFday.png);
-    --mobilenight-bg: url(https://raw.githubusercontent.com/GarthSiTu/image-hosting/refs/heads/main/%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%BE/hlnOFnight.png);
+    --default-bg: url(https://img.gofan.dpdns.org/blog/pc_day_background.webp);
+    --darkmode-bg: url(https://img.gofan.dpdns.org/blog/pc_night_background.webp);
+    --mobileday-bg: url(https://img.gofan.dpdns.org/blog/YunxiaoDay.webp);
+    --mobilenight-bg: url(https://img.gofan.dpdns.org/blog/YunxiaoNight.webp);
   }`;
 }
 // 切换背景主函数
